@@ -19,7 +19,7 @@ def evp_bytes_to_key(password, salt, key_len=32, iv_len=16):
     return ms[:key_len], ms[key_len:key_len + iv_len]
 
 
-def encrypt_password(password, key="onepass987655432", salt=None):
+def enc(password, key="onepass987655432", salt=None):
     try:
         if salt is None:
             salt = os.urandom(8)
