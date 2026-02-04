@@ -10,7 +10,7 @@ service_name = "SCSP_CLOUD" # 나이스플러스 용
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
 session = requests.Session()
-enc_user_pw = encrypt_password(user_pw)
+enc_user_pw = encrypt_password.enc(user_pw)
 
 
 # 나이스플러스
@@ -94,5 +94,6 @@ headers = {
 
 response = session.post(url, json=payload, headers=headers)
 data = response.text
+
 
 print(data)
